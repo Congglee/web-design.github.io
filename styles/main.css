@@ -1,0 +1,172 @@
+:root {
+  --primary-color: #4361ee;
+  --secondary-color: #3a0ca3;
+  --accent-color: #f72585;
+  --light-color: #f8f9fa;
+  --dark-color: #212529;
+  --transition: all 0.3s ease;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  line-height: 1.6;
+  color: var(--dark-color);
+  background-color: var(--light-color);
+  padding: 0;
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+
+header {
+  background: linear-gradient(135deg,
+      var(--primary-color),
+      var(--secondary-color));
+  color: white;
+  padding: 2rem 0;
+  text-align: center;
+}
+
+.header-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  opacity: 0.9;
+  margin-bottom: 2rem;
+}
+
+main {
+  flex: 1;
+}
+
+.examples-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.example-card {
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: var(--transition);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.example-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 20px rgba(0, 0, 0, 0.15);
+}
+
+.card-header {
+  padding: 1.5rem;
+  background: var(--primary-color);
+  color: white;
+  text-align: center;
+}
+
+.card-header h3 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.card-header ion-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.card-body {
+  padding: 1.5rem;
+  flex: 1;
+}
+
+.card-description {
+  margin-bottom: 1.5rem;
+  color: #666;
+}
+
+.btn {
+  display: inline-block;
+  background: var(--primary-color);
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: var(--transition);
+  text-align: center;
+}
+
+.btn-block {
+  display: block;
+  width: 100%;
+}
+
+.btn:hover {
+  background: var(--secondary-color);
+  transform: translateY(-3px);
+}
+
+.intro-section {
+  text-align: center;
+  margin: 3rem 0;
+}
+
+footer {
+  background: var(--dark-color);
+  color: white;
+  text-align: center;
+  padding: 2rem 0;
+  margin-top: 3rem;
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2.2rem;
+  }
+
+  .examples-grid {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+}
+
+/* Footer Links */
+.footer-links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 1rem;
+}
+
+.footer-links a {
+  color: white;
+  text-decoration: none;
+  opacity: 0.8;
+  transition: opacity 0.3s;
+}
+
+.footer-links a:hover {
+  opacity: 1;
+  text-decoration: underline;
+}

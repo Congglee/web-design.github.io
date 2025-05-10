@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CSS UI Components Examples | CSS Examples Library</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" />
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="../styles/reset.css" />
+  <link rel="stylesheet" href="../styles/main.css" />
+  <link rel="stylesheet" href="../styles/components.css" />
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <div class="header-content">
+        <h1>CSS UI Components</h1>
+        <p class="subtitle">
+          Explore custom-designed form elements and interactive UI components
+        </p>
+      </div>
+      <a href="../index.html" class="back-link">
+        <ion-icon name="arrow-back-outline"></ion-icon>
+        Back to Home
+      </a>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="intro-section">
+      <h2>CSS UI Components</h2>
+      <p>
+        Custom UI components can enhance the user experience of your website.
+        These examples show how to create accessible, cross-browser compatible UI elements using CSS.
+      </p>
+
+      <div class="table-of-contents">
+        <h3>On This Page</h3>
+        <ul>
+          <li><a href="#form-controls">Form Controls</a></li>
+          <li><a href="#selection-controls">Selection Controls</a></li>
+          <li><a href="#input-components">Input Components</a></li>
+          <li><a href="#navigation-components">Navigation Components</a></li>
+          <li><a href="#interactive-components">Interactive Components</a></li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="form-controls" class="example-section">
+      <h2>Form Controls</h2>
+      <p>
+        Custom form controls can provide a more consistent look and feel across different browsers and platforms.
+      </p>
+
+      <div class="example-container">
+        <h3>Custom Checkbox</h3>
+        <div class="demo">
+          <label class="checkbox-container">Default Checkbox
+            <input type="checkbox">
+            <span class="checkmark"></span>
+          </label>
+          <label class="checkbox-container">Checked Checkbox
+            <input type="checkbox" checked>
+            <span class="checkmark"></span>
+          </label>
+          <div class="checkbox">
+            <input type="checkbox" class="checkbox__input" id="checkbox__input" />
+            <label for="checkbox__input" class="checkbox__label">Football</label>
+          </div>
+          <div class="custom-checkbox">
+            <input type="checkbox" class="custom-checkbox-input" id="checkbox" />
+            <label for="checkbox" class="custom-checkbox-box">
+              <i class="fa fa-star custom-checkbox-icon"></i>
+            </label>
+            <label for="checkbox" class="custom-check-label">Title of this checkbox</label>
+          </div>
+        </div>
+      </div>
+
+      <div class="example-container">
+        <h3>Custom Radio Button</h3>
+        <div class="demo">
+          <label class="radio-container">Option 1
+            <input type="radio" name="radio-example" checked>
+            <span class="radio-checkmark"></span>
+          </label>
+          <label class="radio-container">Option 2
+            <input type="radio" name="radio-example">
+            <span class="radio-checkmark"></span>
+          </label>
+          <label class="radio-container">Option 3
+            <input type="radio" name="radio-example">
+            <span class="radio-checkmark"></span>
+          </label>
+          <div class="radio">
+            <input type="radio" name="" id="radio__input" class="radio__input" />
+            <label for="radio__input" class="radio__label">I agree the terms</label>
+          </div>
+        </div>
+      </div>
+
+      <div class="example-container">
+        <h3>Toggle Switch</h3>
+        <div class="demo">
+          <label class="switch">
+            <input type="checkbox">
+            <span class="slider-switch"></span>
+          </label>
+          <span style="margin-left: 20px;">Toggle off</span>
+          <br><br>
+          <label class="switch">
+            <input type="checkbox" checked>
+            <span class="slider-switch"></span>
+          </label>
+          <span style="margin-left: 20px;">Toggle on</span>
+          <br><br>
+          <div class="checkbox2">
+            <input type="checkbox" name="" id="checkbox2__input" class="checkbox2__input" />
+            <label for="checkbox2__input" class="checkbox2__label">
+              <div class="checkbox2__spin"></div>
+            </label>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="selection-controls" class="example-section">
+      <h2>Selection Controls</h2>
+      <p>
+        These components help users make selections and navigate through options.
+      </p>
+
+      <div class="example-container">
+        <h3>Custom Select Dropdown</h3>
+        <div class="demo">
+          <div class="custom-select-container">
+            <select class="custom-select">
+              <option value="" disabled selected>Select an option</option>
+              <option value="1">Option 1</option>
+              <option value="2">Option 2</option>
+              <option value="3">Option 3</option>
+              <option value="4">Option 4</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <div class="example-container">
+        <h3>Range Slider</h3>
+        <div class="demo">
+          <div class="slider-container">
+            <input type="range" min="0" max="100" value="50" class="slider" id="range-slider">
+            <p>Value: <span id="range-value">50</span></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="example-container">
+        <h3>Star Rating</h3>
+        <div class="demo">
+          <div class="star-rating">
+            <input type="radio" id="star5" name="rating" value="5">
+            <label for="star5"></label>
+            <input type="radio" id="star4" name="rating" value="4">
+            <label for="star4"></label>
+            <input type="radio" id="star3" name="rating" value="3" checked>
+            <label for="star3"></label>
+            <input type="radio" id="star2" name="rating" value="2">
+            <label for="star2"></label>
+            <input type="radio" id="star1" name="rating" value="1">
+            <label for="star1"></label>
+          </div>
+          <p style="margin-top: 10px;">Hover over stars to rate</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="input-components" class="example-section">
+      <h2>Input Components</h2>
+      <p>
+        These components enhance the way users input data in forms.
+      </p>
+
+      <div class="example-container">
+        <h3>Custom File Input</h3>
+        <div class="demo">
+          <div class="file-input-container">
+            <input type="file" id="file" class="file-input">
+            <label for="file" class="file-input-label">
+              <ion-icon name="cloud-upload-outline"></ion-icon>
+              Choose a file
+            </label>
+            <span class="file-input-name" id="file-name"></span>
+          </div>
+          <div class="file">
+            <input type="file" name="" id="file__input" class="file__input" />
+            <label for="file__input" class="file__label">
+              <i class="fa fa-upload"></i>
+            </label>
+          </div>
+        </div>
+      </div>
+
+      <div class="example-container">
+        <h3>Custom Number Input</h3>
+        <div class="demo">
+          <div class="custom-number-input">
+            <button class="number-btn" id="decrease">-</button>
+            <input type="number" class="number-input" id="number-value" value="0" min="0" max="100">
+            <button class="number-btn" id="increase">+</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="example-container">
+        <h3>Tags Input</h3>
+        <div class="demo">
+          <div class="tags-input-container" id="tags-container">
+            <input type="text" class="tags-input" placeholder="Add tags (press Enter)" id="tags-input">
+          </div>
+          <p style="margin-top: 10px; font-size: 14px;">Type a tag and press Enter to add it</p>
+        </div>
+      </div>
+
+      <div class="example-container">
+        <h3>Color Picker</h3>
+        <div class="demo">
+          <div class="color-picker-container">
+            <div class="color-picker-button" id="color-preview" style="background-color: #4361ee;"></div>
+            <input type="color" class="color-picker" id="color-input" value="#4361ee">
+          </div>
+          <p style="margin-top: 10px;">Selected color: <span id="color-value">#4361ee</span></p>
+        </div>
+      </div>
+    </section>
+
+    <section id="navigation-components" class="example-section">
+      <h2>Navigation Components</h2>
+      <p>
+        These components help users navigate through content and sections of a website.
+      </p>
+
+      <div class="example-container" style="overflow: initial;">
+        <h3>Tabs</h3>
+        <div class="demo">
+          <div class="tabs-container">
+            <div class="tabs-header">
+              <button class="tab-button active" data-tab="tab1">Tab 1</button>
+              <button class="tab-button" data-tab="tab2">Tab 2</button>
+              <button class="tab-button" data-tab="tab3">Tab 3</button>
+            </div>
+            <div class="tab-content active" id="tab1">
+              <p>Tab 1 content. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+            <div class="tab-content" id="tab2">
+              <p>Tab 2 content. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+            </div>
+            <div class="tab-content" id="tab3">
+              <p>Tab 3 content. Excepteur sint occaecat cupidatat non proident.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="example-container">
+        <h3>Dropdown Menu</h3>
+        <div class="demo">
+          <div class="dropdown">
+            <div class="dropdown__select">
+              <i class="fa fa-file dropdown__icon"></i>
+              <span class="dropdown__text">File type</span>
+              <i class="fa fa-caret-down dropdown__caret"></i>
+            </div>
+            <ul class="dropdown__list">
+              <li class="dropdown__item">
+                <i class="fa fa-file dropdown__icon"></i>
+                <span class="dropdown__text">Markup HTML</span>
+              </li>
+              <li class="dropdown__item">
+                <i class="fa fa-file dropdown__icon"></i>
+                <span class="dropdown__text">Photoshop PDF</span>
+              </li>
+              <li class="dropdown__item">
+                <i class="fa fa-file dropdown__icon"></i>
+                <span class="dropdown__text">IIIlustrator AI</span>
+              </li>
+              <li class="dropdown__item">
+                <i class="fa fa-file dropdown__icon"></i>
+                <span class="dropdown__text">Sketch Sketch</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="example-container">
+        <h3>Accordion</h3>
+        <div class="demo">
+          <div class="accordion">
+            <div class="accordion-item" id="accordion1">
+              <button class="accordion-header">
+                <span>Section 1</span>
+                <ion-icon name="chevron-down-outline" class="accordion-icon"></ion-icon>
+              </button>
+              <div class="accordion-content">
+                <div class="accordion-content-inner">
+                  <p>Content for section 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item" id="accordion2">
+              <button class="accordion-header">
+                <span>Section 2</span>
+                <ion-icon name="chevron-down-outline" class="accordion-icon"></ion-icon>
+              </button>
+              <div class="accordion-content">
+                <div class="accordion-content-inner">
+                  <p>Content for section 2. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item" id="accordion3">
+              <button class="accordion-header">
+                <span>Section 3</span>
+                <ion-icon name="chevron-down-outline" class="accordion-icon"></ion-icon>
+              </button>
+              <div class="accordion-content">
+                <div class="accordion-content-inner">
+                  <p>Content for section 3. Duis aute irure dolor in reprehenderit in voluptate velit.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="interactive-components" class="example-section">
+      <h2>Interactive Components</h2>
+      <p>
+        These components enhance user interaction and provide helpful information.
+      </p>
+
+      <div class="example-container">
+        <h3>Tooltip</h3>
+        <div class="demo">
+          <div class="tooltip">
+            <button
+              style="padding: 8px 16px; background: #4361ee; color: white; border: none; border-radius: 4px; cursor: pointer;">
+              Hover me
+            </button>
+            <span class="tooltip-text">This is a tooltip</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>
+        CSS Examples Library &copy; 2025 | Created to demonstrate modern web
+        design techniques
+      </p>
+      <div class="footer-links">
+        <a href="../index.html">Home</a>
+        <a href="./flexbox.html">Flexbox</a>
+        <a href="./grid.html">CSS Grid</a>
+        <a href="./animations.html">Animations</a>
+        <a href="./gradients.html">Gradients</a>
+        <a href="./responsive.html">Responsive Design</a>
+        <a href="./transforms.html">Transforms</a>
+        <a href="./components.html">Components UI</a>
+        <a href="./templates.html">Templates</a>
+        <a href="./tips.html" class="active">Tips & Tricks</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../scripts/components.js"></script>
+</body>
+
+</html>

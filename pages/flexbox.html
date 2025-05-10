@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CSS Flexbox Layout Examples | CSS Examples Library</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" />
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <link rel="stylesheet" href="../styles/reset.css" />
+  <link rel="stylesheet" href="../styles/main.css" />
+  <link rel="stylesheet" href="../styles/flexbox.css" />
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <div class="header-content">
+        <h1>CSS Flexbox Examples</h1>
+        <p class="subtitle">
+          Learn how to create flexible, responsive layouts with CSS Flexbox
+        </p>
+      </div>
+      <a href="../index.html" class="back-link">
+        <ion-icon name="arrow-back-outline"></ion-icon>
+        Back to Home
+      </a>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="intro-section">
+      <h2>What is CSS Flexbox?</h2>
+      <p>
+        Flexbox is a one-dimensional layout method for arranging items in rows
+        or columns. Items flex (expand) to fill additional space or shrink to
+        fit into smaller spaces. This makes it ideal for designing responsive
+        layouts.
+      </p>
+
+      <div class="table-of-contents">
+        <h3>On This Page</h3>
+        <ul>
+          <li><a href="#basic-concepts">Basic Flexbox Concepts</a></li>
+          <li><a href="#flex-direction">Flex Direction & Wrap</a></li>
+          <li><a href="#alignment">Alignment & Justification</a></li>
+          <li><a href="#flex-items">Flex Items Properties</a></li>
+          <li><a href="#real-world-example">Real-World Example</a></li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="basic-concepts" class="example-section">
+      <h2>Basic Flexbox Concepts</h2>
+      <p>
+        To create a flex container, you set the display property of an element
+        to <code>flex</code> or <code>inline-flex</code>.
+      </p>
+
+      <div class="example-container">
+        <h3>Basic Flex Container</h3>
+        <div class="demo demo-basic">
+          <div class="flex-box">Box 1</div>
+          <div class="flex-box">Box 2</div>
+          <div class="flex-box">Box 3</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="flex-direction" class="example-section">
+      <h2>Flex Direction & Wrap</h2>
+      <p>
+        Control the direction of flex items and how they wrap when they reach
+        the edge of their container.
+      </p>
+
+      <div class="example-container">
+        <h3>Flex Direction: Row (default)</h3>
+        <div class="demo demo-row">
+          <div class="flex-box">1</div>
+          <div class="flex-box">2</div>
+          <div class="flex-box">3</div>
+          <div class="flex-box">4</div>
+        </div>
+      </div>
+
+      <div class="example-container">
+        <h3>Flex Direction: Column</h3>
+        <div class="demo demo-column">
+          <div class="flex-box">1</div>
+          <div class="flex-box">2</div>
+          <div class="flex-box">3</div>
+        </div>
+      </div>
+
+      <div class="example-container">
+        <h3>Flex Wrap</h3>
+        <div class="demo demo-wrap">
+          <div class="flex-box">1</div>
+          <div class="flex-box">2</div>
+          <div class="flex-box">3</div>
+          <div class="flex-box">4</div>
+          <div class="flex-box">5</div>
+          <div class="flex-box">6</div>
+          <div class="flex-box">7</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="alignment" class="example-section">
+      <h2>Alignment & Justification</h2>
+      <p>
+        Control how flex items are aligned and distributed along the main and
+        cross axes.
+      </p>
+
+      <div class="example-container">
+        <h3>Justify Content: Space Between</h3>
+        <div class="demo demo-justify-between">
+          <div class="flex-box">1</div>
+          <div class="flex-box">2</div>
+          <div class="flex-box">3</div>
+        </div>
+      </div>
+
+      <div class="example-container">
+        <h3>Align Items: Center</h3>
+        <div class="demo demo-align-center">
+          <div class="flex-box small">1</div>
+          <div class="flex-box medium">2</div>
+          <div class="flex-box large">3</div>
+        </div>
+      </div>
+
+      <div class="example-container">
+        <h3>Center Both Ways (Vertically and Horizontally)</h3>
+        <div class="demo demo-center-both">
+          <div class="flex-box">Centered</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="flex-items" class="example-section">
+      <h2>Flex Items Properties</h2>
+      <p>Control how individual flex items behave within their container.</p>
+
+      <div class="example-container">
+        <h3>Flex Grow</h3>
+        <div class="demo demo-grow">
+          <div class="flex-box grow-1">1 (flex-grow: 1)</div>
+          <div class="flex-box grow-2">2 (flex-grow: 2)</div>
+          <div class="flex-box grow-1">3 (flex-grow: 1)</div>
+        </div>
+      </div>
+
+      <div class="example-container">
+        <h3>Flex Order</h3>
+        <div class="demo demo-order">
+          <div class="flex-box order-3">1 (order: 3)</div>
+          <div class="flex-box order-1">2 (order: 1)</div>
+          <div class="flex-box order-2">3 (order: 2)</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="real-world-example" class="example-section">
+      <h2>Real-World Example</h2>
+      <p>
+        This example shows a practical application of Flexbox in real-world
+        scenarios.
+      </p>
+
+      <!-- CSS Flexbox Card Example -->
+      <div class="example-container">
+        <h3>Gaming Stream Cards</h3>
+
+        <div class="cards">
+          <div class="card">
+            <img
+              src="https://images.unsplash.com/reserve/HgZuGu3gSD6db21T3lxm_San%20Zenone.jpg?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+              alt="" class="card-image" />
+            <div class="card-content">
+              <div class="card-top">
+                <h3 class="card-title">
+                  2020 World Champs Gaming Warzone Tournament
+                </h3>
+                <div class="card-user">
+                  <img
+                    src="https://images.unsplash.com/photo-1418065460487-3e41a6c84dc5?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+                    alt="" class="card-user-avatar" />
+                  <div class="card-user-info">
+                    <div class="card-user-top">
+                      <h4 class="card-user-name">Tam Tran</h4>
+                      <ion-icon name="checkmark-circle"></ion-icon>
+                    </div>
+                    <div class="card-user-game">Call of duty</div>
+                  </div>
+                </div>
+              </div>
+              <div class="card-bottom">
+                <div class="card-live">
+                  <ion-icon name="wifi"></ion-icon>
+                  <span>Live</span>
+                </div>
+                <div class="card-watching">4.2k watching</div>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <img
+              src="https://images.unsplash.com/reserve/HgZuGu3gSD6db21T3lxm_San%20Zenone.jpg?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+              alt="" class="card-image" />
+            <div class="card-content">
+              <div class="card-top">
+                <h3 class="card-title">
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                </h3>
+                <div class="card-user">
+                  <img
+                    src="https://images.unsplash.com/photo-1418065460487-3e41a6c84dc5?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+                    alt="" class="card-user-avatar" />
+                  <div class="card-user-info">
+                    <div class="card-user-top">
+                      <h4 class="card-user-name">Tam Tran</h4>
+                      <ion-icon name="checkmark-circle"></ion-icon>
+                    </div>
+                    <div class="card-user-game">Call of duty</div>
+                  </div>
+                </div>
+              </div>
+              <div class="card-bottom">
+                <div class="card-live">
+                  <ion-icon name="wifi"></ion-icon>
+                  <span>Live</span>
+                </div>
+                <div class="card-watching">4.2k watching</div>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <img
+              src="https://images.unsplash.com/reserve/HgZuGu3gSD6db21T3lxm_San%20Zenone.jpg?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+              alt="" class="card-image" />
+            <div class="card-content">
+              <div class="card-top">
+                <h3 class="card-title">
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                </h3>
+                <div class="card-user">
+                  <img
+                    src="https://images.unsplash.com/photo-1418065460487-3e41a6c84dc5?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+                    alt="" class="card-user-avatar" />
+                  <div class="card-user-info">
+                    <div class="card-user-top">
+                      <h4 class="card-user-name">Tam Tran</h4>
+                      <ion-icon name="checkmark-circle"></ion-icon>
+                    </div>
+                    <div class="card-user-game">Call of duty</div>
+                  </div>
+                </div>
+              </div>
+              <div class="card-bottom">
+                <div class="card-live">
+                  <ion-icon name="wifi"></ion-icon>
+                  <span>Live</span>
+                </div>
+                <div class="card-watching">4.2k watching</div>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <img
+              src="https://images.unsplash.com/reserve/HgZuGu3gSD6db21T3lxm_San%20Zenone.jpg?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+              alt="" class="card-image" />
+            <div class="card-content">
+              <div class="card-top">
+                <h3 class="card-title">
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                </h3>
+                <div class="card-user">
+                  <img
+                    src="https://images.unsplash.com/photo-1418065460487-3e41a6c84dc5?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+                    alt="" class="card-user-avatar" />
+                  <div class="card-user-info">
+                    <div class="card-user-top">
+                      <h4 class="card-user-name">Tam Tran</h4>
+                      <ion-icon name="checkmark-circle"></ion-icon>
+                    </div>
+                    <div class="card-user-game">Call of duty</div>
+                  </div>
+                </div>
+              </div>
+              <div class="card-bottom">
+                <div class="card-live">
+                  <ion-icon name="wifi"></ion-icon>
+                  <span>Live</span>
+                </div>
+                <div class="card-watching">4.2k watching</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CSS Flexbox Post List Example -->
+      <div class="example-container">
+        <h3>Post List</h3>
+
+        <div class="post__list">
+          <div class="post__item">
+            <img
+              src="https://images.unsplash.com/photo-1567225591450-06036b3392a6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+              alt="" class="post__image" />
+            <div class="post__content">
+              <h3 class="post__title">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              </h3>
+              <img
+                src="https://images.unsplash.com/photo-1575535468632-345892291673?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80"
+                alt="" class="post__author" />
+            </div>
+          </div>
+          <div class="post__item">
+            <img
+              src="https://images.unsplash.com/photo-1567225591450-06036b3392a6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+              alt="" class="post__image" />
+            <div class="post__content">
+              <h3 class="post__title">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              </h3>
+              <img
+                src="https://images.unsplash.com/photo-1575535468632-345892291673?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80"
+                alt="" class="post__author" />
+            </div>
+          </div>
+          <div class="post__item">
+            <img
+              src="https://images.unsplash.com/photo-1567225591450-06036b3392a6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+              alt="" class="post__image" />
+            <div class="post__content">
+              <h3 class="post__title">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              </h3>
+              <img
+                src="https://images.unsplash.com/photo-1575535468632-345892291673?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80"
+                alt="" class="post__author" />
+            </div>
+          </div>
+
+          <div class="post__item">
+            <img
+              src="https://images.unsplash.com/photo-1567225591450-06036b3392a6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+              alt="" class="post__image" />
+            <div class="post__content">
+              <h3 class="post__title">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              </h3>
+              <img
+                src="https://images.unsplash.com/photo-1575535468632-345892291673?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80"
+                alt="" class="post__author" />
+            </div>
+          </div>
+          <div class="post__item">
+            <img
+              src="https://images.unsplash.com/photo-1567225591450-06036b3392a6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+              alt="" class="post__image" />
+            <div class="post__content">
+              <h3 class="post__title">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              </h3>
+              <img
+                src="https://images.unsplash.com/photo-1575535468632-345892291673?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80"
+                alt="" class="post__author" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CSS Flexbox Works List Example -->
+      <div class="example-container">
+        <h3>Works List</h3>
+
+        <div class="work">
+          <h2 class="work__heading">Our work</h2>
+          <div class="work__filter">
+            <ul class="work-tab">
+              <li class="work-tab__item">All</li>
+              <li class="work-tab__item">IIIlustration</li>
+              <li class="work-tab__item">Website</li>
+              <li class="work-tab__item">UI & UX</li>
+              <li class="work-tab__item">Logo</li>
+            </ul>
+            <a href="#" class="work__all">View all</a>
+          </div>
+          <ul class="work__list">
+            <li class="work__item">
+              <img
+                src="https://images.unsplash.com/photo-1638913974023-cef988e81629?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+                alt="" class="work__image" />
+            </li>
+            <li class="work__item">
+              <img
+                src="https://images.unsplash.com/photo-1638913974023-cef988e81629?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+                alt="" class="work__image" />
+            </li>
+            <li class="work__item">
+              <img
+                src="https://images.unsplash.com/photo-1638913974023-cef988e81629?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+                alt="" class="work__image" />
+            </li>
+            <li class="work__item">
+              <img
+                src="https://images.unsplash.com/photo-1638913974023-cef988e81629?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+                alt="" class="work__image" />
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- CSS Flexbox Author Example -->
+      <div class="example-container">
+        <h3>Author</h3>
+
+        <div class="author">
+          <img
+            src="https://images.unsplash.com/photo-1651149586874-6a73c6371b5d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80s"
+            alt="" class="author__image" />
+          <div class="author__content">
+            <h2 class="author__name">John Doe - Author</h2>
+            <p class="author__desc">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Delectus doloribus, voluptatum error officia iure cupiditate ex
+              numquam minima officiis? Nemo itaque labore magni molestias,
+              laboriosam maxime facilis cum suscipit assumenda! Lorem ipsum,
+              dolor sit amet consectetur adipisicing elit. Laborum natus
+              asperiores possimus. Explicabo quam sed sit non aliquid
+              repellendus, obcaecati enim voluptatum corrupti quasi
+              praesentium nobis repellat. Ullam, nemo tempora?
+            </p>
+            <div class="author__contact">
+              contact me:
+              <div class="author-social">
+                <div class="author-social__item">
+                  <i class="fa fa-facebook"></i>
+                </div>
+                <div class="author-social__item">
+                  <i class="fa fa-twitter"></i>
+                </div>
+                <div class="author-social__item">
+                  <i class="fa fa-linkedin"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>
+        CSS Examples Library &copy; 2025 | Created to demonstrate modern web
+        design techniques
+      </p>
+      <div class="footer-links">
+        <a href="../index.html">Home</a>
+        <a href="./flexbox.html">Flexbox</a>
+        <a href="./grid.html">CSS Grid</a>
+        <a href="./animations.html">Animations</a>
+        <a href="./gradients.html">Gradients</a>
+        <a href="./responsive.html">Responsive Design</a>
+        <a href="./transforms.html">Transforms</a>
+        <a href="./components.html">Components UI</a>
+        <a href="./templates.html">Templates</a>
+        <a href="./tips.html" class="active">Tips & Tricks</a>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>

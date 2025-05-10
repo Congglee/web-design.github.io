@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CSS Grid Layout Examples | CSS Examples Library</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" />
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <link rel="stylesheet" href="../styles/reset.css" />
+  <link rel="stylesheet" href="../styles/main.css" />
+  <link rel="stylesheet" href="../styles/grid.css" />
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <div class="header-content">
+        <h1>CSS Grid Examples</h1>
+        <p class="subtitle">
+          Learn how to create advanced, responsive layouts with CSS Grid
+        </p>
+      </div>
+      <a href="../index.html" class="back-link">
+        <ion-icon name="arrow-back-outline"></ion-icon>
+        Back to Home
+      </a>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="intro-section">
+      <h2>What is CSS Grid?</h2>
+      <p>
+        CSS Grid is a two-dimensional layout system designed for web
+        interfaces. It allows you to create complex grid-based layouts with
+        rows and columns, making it easier to design web pages without using
+        floats and positioning.
+      </p>
+
+      <div class="table-of-contents">
+        <h3>On This Page</h3>
+        <ul>
+          <li><a href="#basic-concepts">Basic Grid Concepts</a></li>
+          <li><a href="#grid-template">Grid Template Areas</a></li>
+          <li><a href="#grid-placement">Grid Placement</a></li>
+          <li><a href="#grid-alignment">Alignment & Sizing</a></li>
+          <li><a href="#real-world-example">Real-World Examples</a></li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="basic-concepts" class="example-section">
+      <h2>Basic Grid Concepts</h2>
+      <p>
+        To create a grid container, you set the display property of an element
+        to <code>grid</code> or <code>inline-grid</code>.
+      </p>
+
+      <div class="example-container">
+        <h3>Basic Grid Container</h3>
+        <div class="demo demo-basic-grid">
+          <div class="grid-box">Box 1</div>
+          <div class="grid-box">Box 2</div>
+          <div class="grid-box">Box 3</div>
+          <div class="grid-box">Box 4</div>
+          <div class="grid-box">Box 5</div>
+          <div class="grid-box">Box 6</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="grid-template" class="example-section">
+      <h2>Grid Template Areas</h2>
+      <p>
+        Grid template areas allow you to name grid areas and visually lay out
+        how they should appear.
+      </p>
+
+      <div class="example-container">
+        <h3>Grid Template Areas</h3>
+        <div class="demo demo-template-areas">
+          <div class="grid-area header">Header</div>
+          <div class="grid-area sidebar">Sidebar</div>
+          <div class="grid-area content">Content</div>
+          <div class="grid-area footer">Footer</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="grid-placement" class="example-section">
+      <h2>Grid Placement</h2>
+      <p>
+        Control the placement of individual grid items using line-based
+        placement.
+      </p>
+
+      <div class="example-container">
+        <h3>Line-Based Placement</h3>
+        <div class="demo demo-line-placement">
+          <div class="grid-box item1">Item 1</div>
+          <div class="grid-box item2">Item 2</div>
+          <div class="grid-box">Item 3</div>
+          <div class="grid-box">Item 4</div>
+          <div class="grid-box">Item 5</div>
+        </div>
+      </div>
+
+      <div class="example-container">
+        <h3>Span Syntax</h3>
+        <div class="demo demo-span">
+          <div class="grid-box span1">Span 2 columns</div>
+          <div class="grid-box span2">Span 2 rows</div>
+          <div class="grid-box">Item 3</div>
+          <div class="grid-box">Item 4</div>
+          <div class="grid-box">Item 5</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="grid-alignment" class="example-section">
+      <h2>Alignment & Sizing</h2>
+      <p>Control the alignment and sizing of grid items and tracks.</p>
+
+      <div class="example-container">
+        <h3>Grid Alignment</h3>
+        <div class="demo demo-alignment">
+          <div class="grid-box">1</div>
+          <div class="grid-box">2</div>
+          <div class="grid-box">3</div>
+          <div class="grid-box">4</div>
+          <div class="grid-box">5</div>
+          <div class="grid-box">6</div>
+        </div>
+      </div>
+
+      <div class="example-container">
+        <h3>Fractional Units (fr)</h3>
+        <div class="demo demo-fr-units">
+          <div class="grid-box">1fr</div>
+          <div class="grid-box">2fr</div>
+          <div class="grid-box">1fr</div>
+        </div>
+      </div>
+
+      <div class="example-container">
+        <h3>minmax() Function</h3>
+        <div class="demo demo-minmax">
+          <div class="grid-box">minmax(100px, 1fr)</div>
+          <div class="grid-box">minmax(200px, 2fr)</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="real-world-example" class="example-section">
+      <h2>Real-World Examples</h2>
+      <p>
+        These examples show practical applications of CSS Grid in real-world
+        scenarios.
+      </p>
+
+      <!-- Photo Gallery Example -->
+      <div class="example-container">
+        <h3>Photo Gallery</h3>
+        <div class="gallery">
+          <img
+            src="https://images.unsplash.com/photo-1657299170950-87e5b0eaf77c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+            alt="" class="gallery-item" />
+          <img
+            src="https://images.unsplash.com/photo-1660463972009-6e108089b15b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+            alt="" class="gallery-item" />
+          <img
+            src="https://images.unsplash.com/photo-1657299170937-3c87404f01c8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+            alt="" class="gallery-item" />
+          <img
+            src="https://images.unsplash.com/photo-1660463529885-581a0d057c76?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80"
+            alt="" class="gallery-item" />
+          <img
+            src="https://images.unsplash.com/photo-1660461712603-ffa53b3a3303?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+            alt="" class="gallery-item" />
+
+          <img
+            src="https://images.unsplash.com/photo-1660404871825-6172f096ebfd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+            alt="" class="gallery-item" />
+        </div>
+        <div class="images">
+          <div class="image-item">
+            <img
+              src="https://images.unsplash.com/photo-1666878093953-18a02f217e9a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+              alt="" />
+          </div>
+          <div class="image-item">
+            <img
+              src="https://images.unsplash.com/photo-1666849540631-75ef3918899d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+              alt="" />
+          </div>
+          <div class="image-item">
+            <img
+              src="https://images.unsplash.com/photo-1656703323777-241be64cd7f8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80"
+              alt="" />
+          </div>
+          <div class="image-item">
+            <img
+              src="https://images.unsplash.com/photo-1656836678116-c6766b8b3d8e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+              alt="" />
+          </div>
+        </div>
+      </div>
+
+      <!-- Grid Layout Example -->
+      <div class="example-container">
+        <h3>Grid Layout</h3>
+        <div class="grid-layout">
+          <div class="header">header</div>
+          <div class="menu">menu</div>
+          <div class="hero">hero</div>
+          <div class="main">main</div>
+          <div class="banner">banner</div>
+          <div class="extra">extra</div>
+          <div class="image">image</div>
+        </div>
+      </div>
+
+      <!-- Posts List Example -->
+      <div class="example-container">
+        <h3>Posts List</h3>
+        <div class="post-grid">
+          <div class="post-item">
+            <img
+              src="https://images.unsplash.com/photo-1666862185075-6bf663cb76e4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+              alt="" class="post-image post-image--large" />
+            <div class="post-content">
+              <h3 class="post-title">5 myth about booking a flight</h3>
+              <time class="post-time">Sep 12, 2021</time>
+            </div>
+          </div>
+          <div class="post-item">
+            <img
+              src="https://images.unsplash.com/photo-1666882990322-e7f3b8df4f75?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+              alt="" class="post-image" />
+            <div class="post-content">
+              <h3 class="post-title">The best way to travel in 2025</h3>
+              <time class="post-time">Sep 12, 2021</time>
+            </div>
+          </div>
+          <div class="post-item">
+            <img
+              src="https://images.unsplash.com/photo-1661961110372-8a7682543120?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+              alt="" class="post-image" />
+            <div class="post-content">
+              <h3 class="post-title">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+              </h3>
+              <time class="post-time">Sep 12, 2021</time>
+            </div>
+          </div>
+          <div class="post-item">
+            <img
+              src="https://images.unsplash.com/photo-1666973225662-fe02ab2a1dc8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+              alt="" class="post-image" />
+            <div class="post-content">
+              <h3 class="post-title">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              </h3>
+              <time class="post-time">Sep 12, 2021</time>
+            </div>
+          </div>
+          <div class="post-item">
+            <img
+              src="https://images.unsplash.com/photo-1666831168655-b7ce1a8a5f45?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80"
+              alt="" class="post-image" />
+            <div class="post-content">
+              <h3 class="post-title">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                Cupiditate dolor nemo, expedita officiis ducimus fuga
+                delectus.
+              </h3>
+              <time class="post-time">Sep 12, 2021</time>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>
+        CSS Examples Library &copy; 2025 | Created to demonstrate modern web
+        design techniques
+      </p>
+      <div class="footer-links">
+        <a href="../index.html">Home</a>
+        <a href="./flexbox.html">Flexbox</a>
+        <a href="./grid.html">CSS Grid</a>
+        <a href="./animations.html">Animations</a>
+        <a href="./gradients.html">Gradients</a>
+        <a href="./responsive.html">Responsive Design</a>
+        <a href="./transforms.html">Transforms</a>
+        <a href="./components.html">Components UI</a>
+        <a href="./templates.html">Templates</a>
+        <a href="./tips.html" class="active">Tips & Tricks</a>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>

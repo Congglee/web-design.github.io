@@ -1,0 +1,828 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CSS Tips & Tricks | CSS Examples Library</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" />
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <link rel="stylesheet" href="../styles/reset.css" />
+  <link rel="stylesheet" href="../styles/main.css" />
+  <link rel="stylesheet" href="../styles/tips.css" />
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <div class="header-content">
+        <h1>CSS Tips & Tricks</h1>
+        <p class="subtitle">
+          Useful CSS techniques, shortcuts, and clever solutions to common web design problems
+        </p>
+      </div>
+      <a href="../index.html" class="back-link">
+        <ion-icon name="arrow-back-outline"></ion-icon>
+        Back to Home
+      </a>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="intro-section">
+      <h2>Enhance Your CSS Skills</h2>
+      <p>
+        This collection contains practical CSS tips and tricks that can save you time and help you
+        create more efficient, maintainable, and visually appealing websites.
+      </p>
+
+      <div class="table-of-contents">
+        <h3>On This Page</h3>
+        <ul>
+          <li><a href="#quick-wins">Quick Wins</a></li>
+          <li><a href="#layout-tricks">Layout Tricks</a></li>
+          <li><a href="#performance-tips">Performance Tips</a></li>
+          <li><a href="#debugging">Debugging Techniques</a></li>
+          <li><a href="#accessibility">Accessibility Tips</a></li>
+          <li><a href="#maintenance">Code Maintenance</a></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Quick Wins Section -->
+    <section id="quick-wins" class="example-section">
+      <h2>Quick Wins</h2>
+      <p class="section-intro">Simple techniques that make a big difference with minimal effort.</p>
+
+      <!-- Quick Wins Tip 1 -->
+      <div class="tip-card">
+        <div class="tip-header">
+          <h3>Tip 1: Create advanced box-shadow style</h3>
+          <span class="difficulty-badge medium">Medium</span>
+        </div>
+        <div class="tip-content">
+          <p class="tip-description">
+            Create an advanced box-shadow style that adds depth and dimension to your elements.
+          </p>
+
+          <div class="code-example">
+            <pre><code class="language-css">
+.square {
+  width: 50px;
+  height: 50px;
+  margin: 50px;
+  background-color: plum;
+  box-shadow: 60px 0 0 green, 120px 0 0 red, 0 60px 0 violet, 60px 60px 0 lightblue, 120px 60px 0 lightsalmon, 0 120px 0
+  palegreen, 60px 120px 0 firebrick, 120px 120px 0 khaki;
+}
+  
+.circle {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto;
+  border-radius: 50%;
+  background-color: orange;
+  box-shadow: 40px 0 0 red;
+}
+            </code></pre>
+          </div>
+
+          <div class="demo-container">
+            <div class="demo" style="height: 300px;">
+              <!-- Interactive demo area placeholder -->
+              <p class="demo-placeholder">
+              <div class="square"></div>
+              <div class="circle"></div>
+              </p>
+            </div>
+          </div>
+
+          <div class="tip-explanation">
+            <h4>How it works</h4>
+            <p>
+              This technique uses multiple box-shadow properties to create a layered effect, giving the illusion of
+              depth and realism. By adjusting the offsets, blur radius, and color, you can achieve various styles.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Quick Wins Tip 2 -->
+      <div class="tip-card">
+        <div class="tip-header">
+          <h3>Tip 2: Effect for textarea</h3>
+          <span class="difficulty-badge medium">Medium</span>
+        </div>
+        <div class="tip-content">
+          <p class="tip-description">
+            Create a visually appealing effect for textarea elements to enhance user experience.
+          </p>
+
+          <div class="code-example">
+            <pre><code class="language-css">
+.input-style {
+  width: 100%;
+  padding: 20px;
+  border-radius: 8px;
+  color: #333;
+  border: solid 1px #c0c1c7;
+  transition: all 0.25s linear;
+  resize: none;
+}
+
+.input-style::-webkit-input-placeholder {
+  color: #c0c1c7;
+}
+
+.input-style:focus {
+  box-shadow: 0 0 0 4px #ffdcdc;
+  border-color: #e5544a;
+}
+
+.button-style {
+  width: 100%;
+  padding: 20px;
+  border-radius: 8px;
+  margin-top: 20px;
+  margin-bottom: 25px;
+  border: 0;
+  color: #fff;
+  font-weight: bold;
+  font-size: 18px;
+  cursor: pointer;
+  background-color: #e55371;
+  box-shadow: 0 5px 0 0 #92172e;
+  transition: all 0.25s linear;
+}
+
+.button-style:hover {
+  background-color: #e5c4c3;
+  color: #e55371;
+}
+
+.button-style:active {
+  box-shadow: 0 2px 0 0 #92172e;
+  transform: translateY(3px);
+}
+            </code></pre>
+          </div>
+
+          <div class="demo-container">
+            <div class="demo">
+              <!-- Interactive demo area placeholder -->
+              <p class="demo-placeholder">
+                <input type="text" placeholder="Name" class="input-style" />
+                <button class="button-style">Button</button>
+                <textarea name="" class="input-style" id="" cols="30" rows="10"></textarea>
+              </p>
+            </div>
+          </div>
+
+          <div class="tip-explanation">
+            <h4>How it works</h4>
+            <p>
+              This technique uses CSS transitions and pseudo-elements to create a visually appealing effect for textarea
+              elements. By applying styles on focus, you can enhance the user experience and make the textarea more
+              engaging.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Quick Wins Tip 3 -->
+      <div class="tip-card">
+        <div class="tip-header">
+          <h3>Tip 3: Create gradient for border</h3>
+          <span class="difficulty-badge easy">Easy</span>
+        </div>
+        <div class="tip-content">
+          <p class="tip-description">
+            Create a gradient effect for borders to add depth and style to your elements.
+          </p>
+
+          <div class="code-example">
+            <pre><code class="language-css">
+.boxed {
+  width: 100px;
+  height: 40px;
+  margin: 50px;
+  background-image: linear-gradient(to right, #fa4c53, #fd9c84);
+  border-radius: 100px;
+  padding: 10px;
+}
+
+.boxed-child {
+  width: 100%;
+  height: 100%;
+  background-color: #131933;
+  border-radius: inherit;     
+}
+                  </code></pre>
+          </div>
+
+          <div class="demo-container">
+            <div class="demo">
+              <!-- Interactive demo area placeholder -->
+              <p class="demo-placeholder">
+              <div class="boxed">
+                <div class="boxed-child"></div>
+              </div>
+              </p>
+            </div>
+          </div>
+
+          <div class="tip-explanation">
+            <h4>How it works</h4>
+            <p>
+              This technique uses the background-image property to create a gradient effect for borders. By applying a
+              linear gradient, you can achieve a stylish look that enhances the overall design.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Quick Wins Tip 4 -->
+      <div class="tip-card">
+        <div class="tip-header">
+          <h3>Tip 4: Create ribbon with clip-path property</h3>
+          <span class="difficulty-badge medium">Medium</span>
+        </div>
+        <div class="tip-content">
+          <p class="tip-description">
+            Create a ribbon effect with the clip-path property to add depth and style to your elements.
+          </p>
+
+          <div class="code-example">
+            <pre><code class="language-css">
+.polygon {
+  width: 100px;
+  height: 200px;
+  background-color: #f00f0f;
+  border-radius: 5px;
+  margin: 20px auto;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 75%, 0 100%);
+  /* x y coordinates for the polygon */             
+}
+                        </code></pre>
+          </div>
+
+          <div class="demo-container">
+            <div class="demo">
+              <!-- Interactive demo area placeholder -->
+              <p class="demo-placeholder">
+              <div class="polygon"></div>
+              </p>
+            </div>
+          </div>
+
+          <div class="tip-explanation">
+            <h4>How it works</h4>
+            <p>
+              This technique uses the clip-path property to create a ribbon effect. By defining a polygon shape, you can
+              achieve a stylish look that enhances the overall design.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Quick Wins Tip 5 -->
+      <div class="tip-card">
+        <div class="tip-header">
+          <h3>Tip 5: Handling complex backgrounds with clip-path</h3>
+          <span class="difficulty-badge advanced">Advanced</span>
+        </div>
+        <div class="tip-content">
+          <p class="tip-description">
+            Create a complex background effect using the clip-path property to enhance your design.
+          </p>
+
+          <div class="code-example">
+            <pre><code class="language-css">
+.background-container {
+  margin: 0 auto;
+  height: 600px;
+  position: relative;
+}
+
+.background-container::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: linear-gradient(to right bottom, #07047e, #1a3bda);
+  z-index: -1;
+}
+
+@supports (clip-path: polygon(0 0, 100% 0, 100% 70%, 40% 80%, 39% 85%, 0 100%)) {
+  .background-container::before {
+    clip-path: polygon(0 0, 100% 0, 100% 70%, 40% 80%, 39% 85%, 0 100%);
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 70%, 40% 80%, 39% 85%, 0 100%);
+  }             
+}
+                              </code></pre>
+          </div>
+
+          <div class="demo-container">
+            <!-- Interactive demo area placeholder -->
+            <div class="background-container"></div>
+          </div>
+
+          <div class="tip-explanation">
+            <h4>How it works</h4>
+            <p>
+              This technique uses the clip-path property to create a complex background effect. By defining a polygon
+              shape, you can achieve a stylish look that enhances the overall design.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Quick Wins Tip 6 -->
+      <div class="tip-card">
+        <div class="tip-header">
+          <h3>Tip 6: Make cross background with transform skew</h3>
+          <span class="difficulty-badge advanced">Advanced</span>
+        </div>
+        <div class="tip-content">
+          <p class="tip-description">
+            Create a cross background effect using the transform property to enhance your design.
+          </p>
+
+          <div class="code-example">
+            <pre><code class="language-css">
+.cross-background-container {
+  max-width: 800px;
+  margin: 0 auto;
+  height: 600px;
+  position: relative;
+}
+
+.cross-background-container::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: linear-gradient(to right bottom, #07047e, #1a3bda);
+  transform: skewY(-5deg) translateY(-50px);
+  z-index: -1;             
+}
+                                    </code></pre>
+          </div>
+
+          <div class="demo-container">
+            <!-- Interactive demo area placeholder -->
+            <div class="cross-background-container">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Est debitis eos
+              officia quisquam, laborum quis, sequi nesciunt suscipit recusandae nostrum
+              aperiam, cum non! Veritatis non labore quos, alias culpa quisquam.
+            </div>
+          </div>
+
+          <div class="tip-explanation">
+            <h4>How it works</h4>
+            <p>
+              This technique uses the transform property to create a cross background effect. By applying a skew
+              transformation, you can achieve a stylish look that enhances the overall design.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Quick Wins Tip 7 -->
+      <div class="tip-card">
+        <div class="tip-header">
+          <h3>Tip 7: Make image video responsive to scale</h3>
+          <span class="difficulty-badge easy">Easy</span>
+        </div>
+        <div class="tip-content">
+          <p class="tip-description">
+            Create a responsive image or video element that scales with the viewport size.
+          </p>
+
+          <div class="code-example">
+            <pre><code class="language-css">
+.responsive-media {
+  position: relative;
+  height: 0;
+  padding-bottom: 56.25%;
+}
+
+.responsive-media>* {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;             
+}
+                                          </code></pre>
+          </div>
+
+          <div class="demo-container">
+            <!-- Interactive demo area placeholder -->
+            <div class="responsive-media">
+              <img
+                src="https://images.unsplash.com/photo-1657299170932-e75407883a6a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80"
+                alt="" />
+            </div>
+          </div>
+
+          <div class="tip-explanation">
+            <h4>How it works</h4>
+            <p>
+              This technique uses the padding-bottom property to create a responsive container. By setting the
+              padding-bottom to a percentage, you can maintain the aspect ratio of the image or video element.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Layout Tricks Section -->
+    <section id="layout-tricks" class="example-section">
+      <h2>Layout Tricks</h2>
+      <p class="section-intro">Creative solutions for common layout challenges.</p>
+
+      <!-- Layout Tip 1 -->
+      <div class="tip-card">
+        <div class="tip-header">
+          <h3>Tip 1: How to make video responsive in 16 / 9 ratio</h3>
+          <span class="difficulty-badge advanced">Advanced</span>
+        </div>
+        <div class="tip-content">
+          <p class="tip-description">
+            Create a responsive video element that maintains a 16:9 aspect ratio across different screen sizes.
+          </p>
+
+          <div class="code-example">
+            <pre><code class="language-css">
+.media {
+  height: 0;
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-bottom: calc(100% / (var(--ratio)));
+}
+
+.media iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;             
+}
+            </code></pre>
+          </div>
+
+          <div class="demo-container">
+            <!-- Interactive demo area placeholder -->
+            <div class="media">
+              <iframe width="1519" height="585" src="https://www.youtube.com/embed/-OwsZzQt0Fo"
+                title="Chill Night: Lofi Hip Hop Jazz - Chill Study Jazzy R&B Mix" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen>
+              </iframe>
+            </div>
+          </div>
+
+          <div class="tip-explanation">
+            <h4>How it works</h4>
+            <p>
+              This technique uses the padding-bottom property to create a responsive container. By setting the
+              padding-bottom to a percentage, you can maintain the aspect ratio of the video element.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Layout Tip 2 -->
+      <div class="tip-card">
+        <div class="tip-header">
+          <h3>Tip 2: Split form layout with CSS Grid</h3>
+          <span class="difficulty-badge medium">Medium</span>
+        </div>
+        <div class="tip-content">
+          <p class="tip-description">
+            Create a responsive form layout that adapts to different screen sizes using CSS Grid.
+          </p>
+
+          <div class="code-example">
+            <pre><code class="language-css">
+.form-layout {
+  max-width: 500px;
+  margin: 50px auto;
+}
+
+.form-group {
+  margin-bottom: 40px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
+  grid-column-gap: 40px;
+}
+
+.form-input {
+  padding: 10px;
+  border: solid 1px #f00;
+  outline: none;             
+}
+                  </code></pre>
+          </div>
+
+          <div class="demo-container">
+            <!-- Interactive demo area placeholder -->
+            <div class="form-layout">
+              <div class="form-group">
+                <input type="text" class="form-input" placeholder="First name" />
+                <input type="text" class="form-input" placeholder="Last name" />
+                <input type="text" class="form-input" placeholder="Last name" />
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-input" placeholder="First name" />
+                <input type="text" class="form-input" placeholder="Last name" />
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-input" placeholder="Address" />
+              </div>
+            </div>
+          </div>
+
+          <div class="tip-explanation">
+            <h4>How it works</h4>
+            <p>
+              This technique uses CSS Grid to create a responsive form layout. By defining grid-template-columns and
+              grid-column-gap, you can achieve a flexible layout that adapts to different screen sizes.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Performance Tips Section -->
+    <section id="performance-tips" class="example-section">
+      <h2>Performance Tips</h2>
+      <p class="section-intro">Optimize your CSS for better website performance.</p>
+
+      <!-- Performance Tip 1 -->
+      <div class="tip-card">
+        <div class="tip-header">
+          <h3>Tip 1: Placeholder Title</h3>
+          <span class="difficulty-badge medium">Medium</span>
+        </div>
+        <div class="tip-content">
+          <p class="tip-description">
+            Short description of the tip goes here. Explain the problem this tip solves and why it's useful.
+          </p>
+
+          <div class="code-example">
+            <pre><code class="language-css">
+/* Your CSS code example here */
+.selector {
+  property: value;
+  property: value;
+}
+            </code></pre>
+          </div>
+
+          <div class="tip-explanation">
+            <h4>How it works</h4>
+            <p>Explanation of how and why this technique works goes here.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Debugging Techniques Section -->
+    <section id="debugging" class="example-section">
+      <h2>Debugging Techniques</h2>
+      <p class="section-intro">Tricks to find and fix CSS issues quickly.</p>
+
+      <!-- Debugging Tip 1 -->
+      <div class="tip-card">
+        <div class="tip-header">
+          <h3>Tip 1: Placeholder Title</h3>
+          <span class="difficulty-badge easy">Easy</span>
+        </div>
+        <div class="tip-content">
+          <p class="tip-description">
+            Short description of the tip goes here. Explain the problem this tip solves and why it's useful.
+          </p>
+
+          <div class="code-example">
+            <pre><code class="language-css">
+/* Your CSS code example here */
+.selector {
+  property: value;
+  property: value;
+}
+            </code></pre>
+          </div>
+
+          <div class="tip-explanation">
+            <h4>How it works</h4>
+            <p>Explanation of how and why this technique works goes here.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Accessibility Tips Section -->
+    <section id="accessibility" class="example-section">
+      <h2>Accessibility Tips</h2>
+      <p class="section-intro">Make your websites more accessible with these CSS techniques.</p>
+
+      <!-- Accessibility Tip 1 -->
+      <div class="tip-card">
+        <div class="tip-header">
+          <h3>Tip 1: Custom scrollbar in CSS</h3>
+          <span class="difficulty-badge medium">Medium</span>
+        </div>
+        <div class="tip-content">
+          <p class="tip-description">
+            Create a custom scrollbar using CSS to enhance the user experience and match your website's design.
+          </p>
+
+          <div class="code-example">
+            <pre><code class="language-css">
+.scrollbar-boxed {
+  width: 450px;
+  height: 200px;
+  overflow-y: auto;
+}
+  
+  /* Chiều rộng thanh scroll bar */
+.scrollbar-boxed::-webkit-scrollbar {
+  width: 8px;
+}
+  
+  /* Thanh chứa thanh scroll bar */
+.scrollbar-boxed::-webkit-scrollbar-track {
+  background-color: #c0c1c7;
+}
+  
+  /* Thanh scroll */
+.scrollbar-boxed::-webkit-scrollbar-thumb {
+  background-color: #07a787;             
+}
+            </code></pre>
+          </div>
+
+          <div class="demo-container">
+            <div class="demo">
+              <!-- Interactive demo area placeholder -->
+              <div class="scrollbar-boxed">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium qui
+                quibusdam, excepturi debitis voluptates, neque, sequi saepe commodi
+                ducimus non doloremque adipisci soluta quas. Sunt iste corrupti
+                accusantium quasi nam. Lorem ipsum dolor sit amet consectetur, adipisicing
+                elit. Autem iusto officia praesentium suscipit. Voluptas illo obcaecati
+                iusto similique sunt hic id? Aut sed ex at voluptatibus modi dolorem quis
+                reprehenderit.
+
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque nihil, architecto dolores est rerum ex
+                minus voluptates dignissimos assumenda velit quis vel ut? Quaerat temporibus necessitatibus adipisci!
+                Velit, repellendus quis?
+              </div>
+            </div>
+          </div>
+
+          <div class="tip-explanation">
+            <h4>How it works</h4>
+            <p>
+              This technique uses the ::-webkit-scrollbar pseudo-element to customize the appearance of the scrollbar.
+              By defining styles for the scrollbar, track, and thumb, you can create a unique look that matches your
+              website's design.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Code Maintenance Section -->
+    <section id="maintenance" class="example-section">
+      <h2>Code Maintenance</h2>
+      <p class="section-intro">Keep your CSS organized, maintainable, and scalable.</p>
+
+      <!-- Code Maintenance Tip 1 -->
+      <div class="tip-card">
+        <div class="tip-header">
+          <h3>Tip 1: How to use variables efficiently in CSS</h3>
+          <span class="difficulty-badge medium">Medium</span>
+        </div>
+        <div class="tip-content">
+          <p class="tip-description">
+            Use CSS variables to create a consistent design system and make your code more maintainable.
+          </p>
+
+          <div class="code-example">
+            <pre><code class="language-css">
+.card {
+  --card-image-height: 200px;
+  --card-content-padding: 20px;
+  --card-title-color: #1a1a1a;
+  width: 300px;
+  margin: 25px auto;
+  border: solid 1px #ccc;
+}
+
+.card-image {
+  height: var(--card-image-height);
+  object-fit: cover;
+  width: 100%;
+}
+
+.card-content {
+  padding: var(--card-content-padding);
+}
+
+.card-title {
+  color: var(--card-title-color);
+}
+
+@media screen and (max-width: 767px) {
+  .card {
+    --card-image-height: 150px;
+    --card-content-padding: 15px;
+    --card-title-color: red;
+  }             
+}
+            </code></pre>
+          </div>
+
+          <div class="demo-container">
+            <div class="demo">
+              <div class="card">
+                <img
+                  src="https://images.unsplash.com/photo-1657299143333-4a56a5519651?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80"
+                  alt="" class="card-image" />
+
+                <div class="card-content">
+                  <h3 class="card-title">This is card title</h3>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="tip-explanation">
+            <h4>How it works</h4>
+            <p>
+              This technique uses CSS variables to define reusable values for properties. By using variables, you can
+              easily update styles across your entire stylesheet without having to change each instance individually.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="resources-section">
+      <h2>Additional Resources</h2>
+      <ul class="resources-list">
+        <li>
+          <a href="#" class="resource-link">
+            <ion-icon name="link-outline"></ion-icon>
+            <span>Resource 1 Title</span>
+          </a>
+        </li>
+        <li>
+          <a href="#" class="resource-link">
+            <ion-icon name="link-outline"></ion-icon>
+            <span>Resource 2 Title</span>
+          </a>
+        </li>
+        <li>
+          <a href="#" class="resource-link">
+            <ion-icon name="link-outline"></ion-icon>
+            <span>Resource 3 Title</span>
+          </a>
+        </li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>
+        CSS Examples Library &copy; 2025 | Created to demonstrate modern web
+        design techniques
+      </p>
+      <div class="footer-links">
+        <a href="../index.html">Home</a>
+        <a href="./flexbox.html">Flexbox</a>
+        <a href="./grid.html">CSS Grid</a>
+        <a href="./animations.html">Animations</a>
+        <a href="./gradients.html">Gradients</a>
+        <a href="./responsive.html">Responsive Design</a>
+        <a href="./transforms.html">Transforms</a>
+        <a href="./components.html">Components UI</a>
+        <a href="./templates.html">Templates</a>
+        <a href="./tips.html" class="active">Tips & Tricks</a>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>
